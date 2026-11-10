@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# foolsgold's own scratch ledger from running the examples in this repo.
+# In YOUR project, commit .foolsgold/ledger.jsonl: it is the evidence.
+.foolsgold/

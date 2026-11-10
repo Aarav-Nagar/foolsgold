@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foolsgold"
+version = "0.1.0"
+description = "The odometer for backtests: count every trial, then find out if your best Sharpe beats luck."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Aarav Nagar" }]
+keywords = ["backtesting", "sharpe-ratio", "deflated-sharpe", "overfitting", "multiple-testing", "quant", "trading"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/Aarav-Nagar/foolsgold"
+Issues = "https://github.com/Aarav-Nagar/foolsgold/issues"
+
+[project.scripts]
+foolsgold = "foolsgold.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
